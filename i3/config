@@ -9,6 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Gaps
+for_window [class=".*"] border pixel 2
+gaps inner 15
+gaps outer 15
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -179,8 +184,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+# Floating programs
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] resize shrink left 100, resize shrink right 100, resize shrink down 50, resize shrink up 50
