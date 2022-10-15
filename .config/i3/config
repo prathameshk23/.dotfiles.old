@@ -189,14 +189,28 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Pavucontrol"] resize shrink left 100, resize shrink right 100, resize shrink down 50, resize shrink up 50
 
 # Dracula theme
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+set $bgb             #282a36
+set $bg             #282a36AA
+set $fg             #f8f8f2
+set $tf             #f8f8f2AA
+set $hi             #f1fa7c
+set $tx             #040404
+set $pk             #ff79c6
+# yellow
+set $yw             #f1fa7c
+# green
+set $gn             #50fa7b
+# red
+set $rd             #ff5555
+set $id             #ff79c6
 
-client.background       #F8F8F2
+# set some nice colors      border  background  text  indicator
+client.focused              $id     $pk         $tx     $id
+client.unfocused            $bg     $bg         $tf     $id
+client.focused_inactive     $bg     $bg         $pk     $id
+client.urgent               $yw     $yw         $tx     $id
+#border & indicator are ignored
+client.placeholder          $bg     $bg         $bg     $bg
 
 bar {
   colors {
