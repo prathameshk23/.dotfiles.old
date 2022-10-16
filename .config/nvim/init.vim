@@ -5,7 +5,12 @@ call plug#end()
 set number relativenumber
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
+
+filetype plugin indent on
+autocmd FileType nasm setlocal ft=nasm expandtab
+autocmd FileType html setlocal tabstop=2 shiftwidth=2
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 
 " Disable search highlight
 nnoremap <CR> :noh<CR><CR>
