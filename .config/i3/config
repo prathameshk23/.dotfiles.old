@@ -187,9 +187,15 @@ bindsym $mod+r mode "resize"
 # Floating programs
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Pavucontrol"] resize shrink left 100, resize shrink right 100, resize shrink down 50, resize shrink up 50
+for_window [class="Chromium"] fullscreen enable
+for_window [class="discord"] fullscreen enable
+
+# Workspaces
+assign [class="Chromium"] $ws3
+assign [class="discord"] $ws4
 
 # Dracula theme
-set $bgb             #282a36
+set $bgb            #282a36
 set $bg             #282a36AA
 set $fg             #f8f8f2
 set $tf             #f8f8f2AA
