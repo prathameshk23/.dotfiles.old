@@ -8,7 +8,7 @@ set shiftwidth=4
 set noexpandtab
 
 filetype plugin indent on
-autocmd FileType nasm setlocal ft=nasm expandtab
+autocmd FileType asm setlocal ft=nasm expandtab
 autocmd FileType html setlocal tabstop=2 shiftwidth=2
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 
