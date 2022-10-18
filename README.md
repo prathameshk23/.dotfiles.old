@@ -29,6 +29,10 @@ git clone https://github.com/manankarnik/.dotfiles
 cd .dotfiles
 ```
 
+## Exclude files/directories from linking (Optional)
+Add the files/directories to [.stow-local-ignore](.stow-local-ignore)
+
+
 ## Link files
 ```sh
 stow .
