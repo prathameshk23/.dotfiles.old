@@ -12,6 +12,7 @@ Shell | [fish](https://fishshell.com/)/bash
 Text editor | [neovim](https://neovim.io/)
 File manager | [ranger](https://github.com/ranger/ranger)
 Widgets | [eww](https://github.com/elkowar/eww)
+Notification manager | [dunst](https://github.com/dunst-project/dunst)
 Symbolic link manager | stow
 
 ## Change directory into home
