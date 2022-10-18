@@ -1,5 +1,6 @@
 call plug#begin('~/.config/.nvim/plugged')
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'elkowar/yuck.vim'
 call plug#end()
 
 set number relativenumber
