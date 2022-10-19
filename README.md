@@ -4,7 +4,7 @@ Dotfiles for linux
 ## Dependencies
 Component | Package
 -- | --
-Window manager | [i3-gaps](https://github.com/Airblader/i3)
+Window manager | [bspwm](https://github.com/baskerville/bspwm)
 Compositor | [picom](https://github.com/yshui/picom)
 Application Launcher | [rofi](https://github.com/davatorium/rofi)
 Terminal Emulator | [kitty](https://sw.kovidgoyal.net/kitty/)

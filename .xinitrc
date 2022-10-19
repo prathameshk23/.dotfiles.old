@@ -36,4 +36,5 @@ fi
 xsetroot -cursor_name left_ptr &
 nitrogen --restore &
 picom --experimental-backends &
-exec i3
+sxhkd &
+exec bspwm
