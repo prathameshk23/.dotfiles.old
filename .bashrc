@@ -10,3 +10,4 @@ alias vim="nvim"
 PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
+export PATH=opt/eww/:$PATH
