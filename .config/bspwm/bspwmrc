@@ -13,10 +13,16 @@ bspc config window_gap              12
 bspc config split_ratio             0.50
 bspc config borderless_monocle      true
 bspc config gapless_monocle         true
-bspc config single_monocle          true
+
+# Monocle layout over polybar
+bspc config top_monocle_padding     -42
+
+# Set desktop 3 and 4 to monocle layout
+bspc desktop "^3" -l monocle
+bspc desktop "^4" -l monocle
 
 # Application specific rules
-bspc rule -a discord state=fullscreen desktop="^3"
+bspc rule -a discord state=fullscreen desktop="^4"
 bspc rule -a chromium state=fullscreen
 
 # Theme
