@@ -1,7 +1,12 @@
 call plug#begin('~/.config/.nvim/plugged')
+" Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
+" Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+" Yuck support
 Plug 'elkowar/yuck.vim'
 call plug#end()
 
