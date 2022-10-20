@@ -11,11 +11,14 @@ bspc monitor -d 1 2 3 4 5
 
 bspc config border_width            2
 bspc config window_gap              12
+bspc config top_padding             52
 
 bspc config split_ratio             0.50
 bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 
+# Monocle layout over bar
+bspc config top_monocle_padding     -52
 
 # Set desktop 3 and 4 to monocle layout
 bspc desktop "^3" -l monocle
