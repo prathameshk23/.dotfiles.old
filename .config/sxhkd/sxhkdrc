@@ -1,3 +1,23 @@
+#	
+# Screenshot
+#
+
+# Copy selection to clipboard
+Print
+	scrot -d1 -s -e 'xclip -selection clip -t image/png "$f"; rm "$f"' 
+
+# Copy entire window to clipboard
+ctrl + Print
+	scrot -d1 -e 'xclip -selection clip -t image/png "$f"; rm "$f"' 
+
+# Save selection to ~/Pictures/Screenshots
+super + Print
+	scrot -d1 -s ~/Pictures/Screenshots/snip-%Y-%m-%d_%H:%M:%S.png
+
+# Save entire screen to ~/Pictures/Screenshots
+super + ctrl + Print
+	scrot -d1 ~/Pictures/Screenshots/full-%Y-%m-%d_%H:%M:%S.png
+
 #
 # wm independent hotkeys
 #
