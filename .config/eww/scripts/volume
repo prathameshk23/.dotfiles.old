@@ -1,0 +1,35 @@
+#!/bin/sh
+# Set volume if passed as command-line argument
+if [ $1 ]
+then
+	pactl set-sink-volume @DEFAULT_SINK@ $1%
+	eww update volume=$1
+	if [ $1 == 0 ]
+	then
+		eww update vol_icon="ﱝ"
+	elif [ $1 -lt 40 ]
+	then
+		eww update vol_icon=""
+	elif [ $1 -lt 70 ]
+	then
+		eww update vol_icon="奔"
+	elif [ $1 -le 100 ]
+	then
+		eww update vol_icon="墳"
+	fi
+fi
+
+function toggle_mute() {
+	# If muted, set volume value to last_vol
+	if [ $1 == 0 ]
+	then
+		last_vol=$(eww get last_vol)
+		eww update volume=$last_vol
+		pactl set-sink-volume @DEFAULT_SINK@ $last_vol%
+	# Else set last_vol to volume and mute
+	else
+		eww update last_vol=$1
+		eww update volume=0
+		pactl set-sink-volume @DEFAULT_SINK@ 0%
+	fi
+}
