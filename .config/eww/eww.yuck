@@ -1,0 +1,56 @@
+(defpoll datetime :interval "1s" `date +"%H:%m:%S | %d %b, %Y"`)
+(defvar vol_expanded "false")
+(defvar vol_icon "奔")
+(defvar volume 0)
+(defvar last_vol 50)
+
+(defwindow calendar
+  :monitor 0
+  :stacking "fg"
+  :wm-ignore "true"
+  :geometry (geometry :x "1682" :y "56px" :width "200px" :height "200px")
+  (eventbox :onhoverlost `eww close calendar` (calendar)))
+
+(defwindow bar
+  :class "bar"
+  :monitor 0
+  :geometry (geometry :x "0"
+              :y "12"
+              :width "1896px"
+              :height "40px"
+              :anchor "top center")
+  :stacking "bg"
+  :windowtype "desktop"
+  :wm-ignore "false"
+  (bar))
+
+(defwidget bar []
+  (box :orientation "h"
+    :halign "fill"
+    :vexpand "false"
+    :hexpand "false"
+    (start)
+    (end)))
+
+(defwidget start []
+  (box :orientation "h" :halign "start"
+    "WIP"))
+
+(defwidget end []
+  (box :orientation "h" :halign "end" :space-evenly "false"
+    (datetime)
+    (volume)))
+
+(defwidget datetime [] 
+  (box
+    (eventbox :onclick `eww open --toggle calendar`
+      datetime)))
+
+
+(defwidget volume[]
+  (eventbox :onhover `eww update vol_expanded="true"`
+            :onhoverlost `eww update vol_expanded="false"`
+    (box :tooltip "Volume: ${volume}" :space-evenly "false"
+      (button :onclick "source scripts/volume && toggle_mute ${volume}" vol_icon)
+      (revealer :transition "slideright" :reveal vol_expanded :duration "500ms"
+          (scale :min 0 :max 101 :value volume :onchange "scripts/volume {}")))))
