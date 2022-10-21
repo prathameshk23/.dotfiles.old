@@ -1,8 +1,8 @@
 (defpoll datetime :interval "1s" `date +"%H:%m:%S | %d %b, %Y"`)
 (defvar vol_expanded "false")
-(defvar vol_icon "奔")
-(defvar volume 0)
-(defvar last_vol 50)
+(defvar vol_icon "墳")
+(deflisten volume :initial 0 `scripts/volume listen`)
+(defvar last_vol 0) 
 
 (defwindow calendar
   :monitor 0
@@ -50,7 +50,7 @@
 (defwidget volume[]
   (eventbox :onhover `eww update vol_expanded="true"`
             :onhoverlost `eww update vol_expanded="false"`
-    (box :tooltip "Volume: ${volume}" :space-evenly "false"
+    (box :space-evenly "false"
       (button :onclick "source scripts/volume && toggle_mute ${volume}" vol_icon)
-      (revealer :transition "slideright" :reveal vol_expanded :duration "500ms"
-          (scale :min 0 :max 101 :value volume :onchange "scripts/volume {}")))))
+      (revealer :transition "slideright" :reveal vol_expanded :duration "1s"
+          (scale :tooltip "Volume: ${volume}" :class "volume-slider" :min 1 :max 101 :value volume :onchange "scripts/volume {}")))))
