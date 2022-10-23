@@ -6,6 +6,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
+" Colors
+Plug 'norcalli/nvim-colorizer.lua'
+
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
@@ -36,3 +39,5 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+luafile $HOME/.config/nvim/lua/plug-colorizer.lua
