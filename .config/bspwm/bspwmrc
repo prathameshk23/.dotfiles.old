@@ -25,6 +25,9 @@ bspc desktop "^4" -l monocle
 # Application specific rules
 bspc rule -a discord state=fullscreen desktop="^4"
 bspc rule -a chromium state=fullscreen
+bspc rule -a Pavucontrol state=floating
+bspc rule -a Pavucontrol state=floating rectangle=473x288+1431+54 focus=off follow=off sticky=on
+bspc rule -a Gsimplecal state=floating rectangle=250x188+1654+52 focus=off follow=off sticky=on
 
 # Theme
 bspc config normal_border_color "#44475a"
