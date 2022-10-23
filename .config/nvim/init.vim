@@ -1,4 +1,7 @@
 call plug#begin('~/.config/.nvim/plugged')
+" Dracula theme
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -10,6 +13,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'elkowar/yuck.vim'
 call plug#end()
 
+colorscheme dracula
+set termguicolors
 set number relativenumber
 set tabstop=4
 set shiftwidth=4
