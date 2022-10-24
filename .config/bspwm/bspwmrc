@@ -16,8 +16,8 @@ bspc config gapless_monocle         true
 
 
 # Application specific rules
-bspc rule -a discord state=fullscreen desktop="^4"
 bspc rule -a chromium state=fullscreen
+bspc rule -a discord desktop="^4"
 bspc rule -a Pavucontrol state=floating rectangle=473x288+1431+54 focus=off follow=off sticky=on
 bspc rule -a Gsimplecal state=floating rectangle=250x188+1654+52 focus=off follow=off sticky=on
 
