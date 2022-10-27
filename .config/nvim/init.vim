@@ -44,3 +44,4 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+source $HOME/.config/nvim/plug-config/coc.vim
