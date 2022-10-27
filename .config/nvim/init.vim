@@ -2,6 +2,9 @@ call plug#begin('~/.config/.nvim/plugged')
 " Dracula theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+" Auto completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
