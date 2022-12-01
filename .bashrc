@@ -11,3 +11,4 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
 export PATH=opt/eww/:$PATH
+export PATH=/home/manan/flutter/bin:$PATH
