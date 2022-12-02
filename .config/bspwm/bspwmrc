@@ -21,6 +21,10 @@ bspc rule -a discord desktop="^4"
 bspc rule -a Pavucontrol state=floating rectangle=473x288+1431+54 focus=off follow=off sticky=on
 bspc rule -a Gsimplecal state=floating rectangle=250x188+1654+52 focus=off follow=off sticky=on
 
+# Android studio visual fix
+wmname LG3D &
+bspc rule -a android-studio state=floating border=off follow=on
+
 # Theme
 bspc config normal_border_color "#44475a"
 bspc config active_border_color "#bd93f9"
