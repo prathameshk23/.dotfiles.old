@@ -23,6 +23,7 @@ local options = {
   linebreak = true,
 
   -- Misc
+  termguicolors = true,
   clipboard = "unnamedplus",
   confirm = true,
 }
