@@ -22,8 +22,15 @@ vim.cmd([[
 return require("packer").startup(function()
   use "wbthomason/packer.nvim"
 
+  -- Dependencies
+  use "nvim-tree/nvim-web-devicons"
+  use "nvim-lua/plenary.nvim"
+
   -- Dracula theme
   use {'dracula/vim', as = 'dracula'}
+
+  use 'nvim-tree/nvim-tree.lua'
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
