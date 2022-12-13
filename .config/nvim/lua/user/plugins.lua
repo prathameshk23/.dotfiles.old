@@ -30,6 +30,7 @@ return require("packer").startup(function()
   use {'dracula/vim', as = 'dracula'}
 
   use 'nvim-tree/nvim-tree.lua'
+  use  "nvim-lualine/lualine.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
