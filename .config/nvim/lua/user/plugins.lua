@@ -31,6 +31,7 @@ return require("packer").startup(function()
 
   use 'nvim-tree/nvim-tree.lua'
   use  "nvim-lualine/lualine.nvim"
+  use "nvim-treesitter/nvim-treesitter"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
