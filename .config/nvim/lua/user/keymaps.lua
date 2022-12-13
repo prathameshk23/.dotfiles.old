@@ -8,3 +8,4 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("i", "jj", "<ESC>", opts)
