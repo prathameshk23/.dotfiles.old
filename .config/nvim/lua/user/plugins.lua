@@ -32,6 +32,7 @@ return require("packer").startup(function()
   use 'nvim-tree/nvim-tree.lua'
   use  "nvim-lualine/lualine.nvim"
   use "nvim-treesitter/nvim-treesitter"
+  use {"nvim-telescope/telescope.nvim", tag = '0.1.0'}
 
 
   -- Automatically set up your configuration after cloning packer.nvim
