@@ -40,6 +40,7 @@ return require("packer").startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  use 'andweeb/presence.nvim'
 
 
   -- Automatically set up your configuration after cloning packer.nvim
