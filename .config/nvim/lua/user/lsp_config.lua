@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua" },
+  ensure_installed = { "sumneko_lua", "pyright" },
 })
 
 local on_attach = function(_, bufnr)
@@ -36,6 +36,10 @@ require("lspconfig").sumneko_lua.setup {
       }
     }
   }
+}
+
+require("lspconfig").pyright.setup {
+  on_attach = on_attach,
 }
 
 require("lspconfig").dartls.setup {
