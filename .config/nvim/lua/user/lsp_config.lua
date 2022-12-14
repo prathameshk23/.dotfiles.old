@@ -27,7 +27,9 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").sumneko_lua.setup {
+  capabilities = capabilities,
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -39,9 +41,11 @@ require("lspconfig").sumneko_lua.setup {
 }
 
 require("lspconfig").pyright.setup {
+  capabilities = capabilities,
   on_attach = on_attach,
 }
 
 require("lspconfig").dartls.setup {
+  capabilities = capabilities,
   on_attach = on_attach,
 }
