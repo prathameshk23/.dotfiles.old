@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
 
   -- Dracula theme
   use {'dracula/vim', as = 'dracula'}
+  use "folke/tokyonight.nvim"
 
   use 'nvim-tree/nvim-tree.lua'
   use  "nvim-lualine/lualine.nvim"
