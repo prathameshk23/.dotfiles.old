@@ -1,8 +1,8 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -27,13 +27,13 @@ return require("packer").startup(function(use)
   use "nvim-lua/plenary.nvim"
 
   -- Dracula theme
-  use {'dracula/vim', as = 'dracula'}
+  use { 'dracula/vim', as = 'dracula' }
   use "folke/tokyonight.nvim"
 
   use 'nvim-tree/nvim-tree.lua'
-  use  "nvim-lualine/lualine.nvim"
+  use "nvim-lualine/lualine.nvim"
   use "nvim-treesitter/nvim-treesitter"
-  use {"nvim-telescope/telescope.nvim", tag = '0.1.0'}
+  use { "nvim-telescope/telescope.nvim", tag = '0.1.0' }
 
   use {
     "williamboman/mason.nvim",

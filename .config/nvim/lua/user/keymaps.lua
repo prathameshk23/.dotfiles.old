@@ -1,5 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 -- Map leader key
 keymap("", "<Space>", "<Nop>", opts)
