@@ -58,6 +58,8 @@ return require("packer").startup(function(use)
   }
 
   use "jose-elias-alvarez/null-ls.nvim"
+
+  use "kdheepak/lazygit.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
