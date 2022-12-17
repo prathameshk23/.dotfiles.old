@@ -9,3 +9,5 @@ require("user.telescope")
 require("user.lsp_config")
 require("user.nvim-cmp")
 require("user.null-ls")
+
+vim.api.nvim_command("autocmd BufWrite * :lua vim.lsp.buf.format()")
