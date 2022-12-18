@@ -8,5 +8,7 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<leader>t", ":terminal<CR>", opts)
 keymap("i", "jj", "<ESC>", opts)
+keymap("t", "<M-[>", "<C-\\><C-n>", opts)
 keymap("", "<leader>gg", ":LazyGit<CR>", opts)
