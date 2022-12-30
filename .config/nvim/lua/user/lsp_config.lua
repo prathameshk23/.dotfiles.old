@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua", "pyright", "vuels" },
+  ensure_installed = { "sumneko_lua", "pyright", "vuels", "tsserver", "tailwindcss" },
 })
 
 local on_attach = function(_, bufnr)
@@ -73,6 +73,16 @@ require("lspconfig").dartls.setup {
 }
 
 require("lspconfig").vuels.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+require("lspconfig").tsserver.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
+require("lspconfig").tailwindcss.setup {
   capabilities = capabilities,
   on_attach = on_attach,
 }
