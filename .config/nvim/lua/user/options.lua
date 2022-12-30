@@ -26,6 +26,7 @@ local options = {
   termguicolors = true,
   clipboard = "unnamedplus",
   confirm = true,
+  updatetime = 250,
 }
 
 for key, value in pairs(options) do
