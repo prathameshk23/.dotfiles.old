@@ -9,4 +9,3 @@ require("user.telescope")
 require("user.lsp_config")
 require("user.nvim-cmp")
 require("user.null-ls")
-require("flutter-tools").setup{}

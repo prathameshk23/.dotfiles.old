@@ -7,7 +7,7 @@ local lsp_formatting = function(bufnr)
   vim.lsp.buf.format({
     filter = function(client)
       -- apply whatever logic you want (in this example, we'll only use null-ls)
-      return client.name == "null-ls"
+      return client.name == "null-ls" or "dartls"
     end,
     bufnr = bufnr,
   })
@@ -90,6 +90,14 @@ require("lspconfig").pyright.setup {
 require("lspconfig").volar.setup {
   capabilities = capabilities,
   on_attach = on_attach,
+}
+
+
+require("flutter-tools").setup{
+  lsp = {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
 }
 
 require("lspconfig").tsserver.setup {
