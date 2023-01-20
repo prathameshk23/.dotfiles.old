@@ -1,6 +1,8 @@
 -- Set up nvim-cmp.
 local cmp = require("cmp")
 local luasnip = require('luasnip')
+require("luasnip.loaders.from_vscode").lazy_load()
+luasnip.filetype_extend("dart", {"flutter"})
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
