@@ -56,6 +56,7 @@ return require("packer").startup(function(use)
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip'
   }
+  use "rafamadriz/friendly-snippets"
 
   use "jose-elias-alvarez/null-ls.nvim"
 
